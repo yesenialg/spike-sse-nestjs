@@ -1,7 +1,7 @@
 import { Controller, Get, HttpCode, HttpStatus, Post, Sse } from '@nestjs/common';
 import { AppService } from './app.service';
 import { interval, map, Observable, Subject, tap } from 'rxjs';
-import { GameScore } from './game-score';
+import { GameScore } from '../entities/game-score';
 
 @Controller('games')
 export class AppController {
