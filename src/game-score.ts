@@ -1,4 +1,8 @@
 export interface GameScore {
-    lakers: number;
-    denver: number;
-}
+    data: {
+        game: {
+            lakers: number;
+            denver: number
+        }
+    }
+};
