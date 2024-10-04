@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { AppModule } from './app-component/app.module';
+import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -17,5 +17,7 @@ async function bootstrap() {
   app.enableCors()
   await app.listen(port);
   console.log(`Disponible en http://localhost:${port}/api`)
+  console.log(`Disponible en http://localhost:${port}/games/canal-unico/scores-automatico`)
+  console.log(`Disponible en http://localhost:${port}/games/canales-diferentes/scores-subscribe/:id`)
 }
 bootstrap();

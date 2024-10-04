@@ -1,19 +1,11 @@
-import { Controller, Get, HttpCode, HttpStatus, Post, Sse } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Controller, HttpCode, HttpStatus, Post, Sse } from '@nestjs/common';
 import { interval, map, Observable, Subject, tap } from 'rxjs';
 import { GameScore } from '../entities/game-score';
 
-@Controller('games')
-export class AppController {
+@Controller('games/canal-unico')
+export class UnicoCanalController {
   private scoreSubject = new Subject<GameScore>();
   private currentGameScore: GameScore = { data: { game: { lakers: 0, denver: 0 } } };
-
-  constructor(private readonly appService: AppService) { }
-
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
 
   @Sse('scores-automatico')
   scores(): Observable<GameScore> {
