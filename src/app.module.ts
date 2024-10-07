@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { UnicoCanalController } from './app-controllers/unico-canal.controller';
-import { DiferentesCanalesController } from './app-controllers/diferentes-canales.controller';
+import { SingleChannelController } from './app-controllers/single-channel.controller';
+import { DifferentChannelsController } from './app-controllers/different-channels.controller';
 
 @Module({
   imports: [],
-  controllers: [UnicoCanalController, DiferentesCanalesController],
+  controllers: [SingleChannelController, DifferentChannelsController],
   providers: [],
 })
 export class AppModule {}

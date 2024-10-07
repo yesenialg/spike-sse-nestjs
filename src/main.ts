@@ -17,7 +17,7 @@ async function bootstrap() {
   app.enableCors()
   await app.listen(port);
   console.log(`Disponible en http://localhost:${port}/api`)
-  console.log(`Disponible en http://localhost:${port}/games/canal-unico/scores-automatico`)
-  console.log(`Disponible en http://localhost:${port}/games/canales-diferentes/scores-subscribe/:id`)
+  console.log(`Disponible en http://localhost:${port}/healthy/single-channel/automatic-scores`)
+  console.log(`Disponible en http://localhost:${port}/healthy/different-channels/subscription-scores/:id`)
 }
 bootstrap();
